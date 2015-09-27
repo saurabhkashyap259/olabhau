@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:orientation="vertical"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+
+            <LinearLayout android:layout_margin="5dp" android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp" android:id="@+id/callPoliceIV"
+                    android:layout_height="60dp" android:src="@drawable/police_icon" android:layout_marginRight="100dp"/>
+
+                <ImageView
+                    android:layout_width="60dp" android:id="@+id/callAmbulanceIV"
+                    android:layout_height="60dp" android:src="@drawable/ambulance_icon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp" android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                android:layout_width="match_parent" android:background="#999999" android:layout_weight="80"
+                android:layout_height="wrap_content" android:gravity="center_horizontal" >
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"  android:layout_weight="20"
+                        android:layout_height="wrap_content" android:gravity="center_horizontal" >
+                        <TextView
+                            android:id="@+id/fareTV" android:textColor="#ffffff" android:textSize="20sp"
+                            android:layout_width="wrap_content" android:layout_centerInParent="true"
+                            android:layout_height="wrap_content" android:text=".."/>
+                        </RelativeLayout>
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"  android:layout_weight="20"
+                        android:layout_height="wrap_content" android:gravity="center_horizontal" >
+                        <TextView
+                            android:id="@+id/speedTV"  android:textColor="#ffffff"
+                            android:layout_width="wrap_content" android:textSize="20sp"
+                            android:layout_height="wrap_content" android:text=".."/>
+                        </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"  android:layout_weight="20"
+                        android:layout_height="wrap_content" android:gravity="center_horizontal" >
+                        <TextView
+                            android:id="@+id/distanceTV"  android:textColor="#ffffff"
+                            android:layout_width="wrap_content" android:textSize="20sp"
+                            android:layout_height="wrap_content" android:text=".."/>
+                        </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:id="@+id/conversationLL"
+                android:layout_height="wrap_content" android:orientation="vertical">
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:id="@+id/linearLayout" android:layout_alignParentBottom="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/queryET"
+            android:hint="@string/etHintText"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ask"
+            android:layout_alignParentRight="true"
+            android:id="@+id/askBT" />
+    </RelativeLayout>
+</RelativeLayout>
